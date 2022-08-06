@@ -1,26 +1,52 @@
-html,
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#game {
+  width: 500px;
+  height: 200px;
+  border: 2px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-* {
-  box-sizing: border-box;
+#character {
+  width: 20px;
+  height: 50px;
+  background-color: green;
+  position: relative;
+  top: 145px;
+  left:3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.animate {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0%{top:145px;}
+  30%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 145px;}
+}
+
+#block {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: relative;
+  top: 125px;
+  left: 480px;
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0%{left:480px;}
+  100%{left:-40px;}
 }
