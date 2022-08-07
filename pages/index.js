@@ -32,11 +32,6 @@ function Home() {
   function onKeyDown(event) {
     jump();
   }
-  /*html.addEventListener('keyup', event => {
-      if (event.code === 'Space') {
-        jump()
-      }
-    })*/
   
   return (
     <body id="screen" className="grid h-screen place-items-center">
